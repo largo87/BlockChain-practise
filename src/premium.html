@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Blockchain Developer Toolkit</title>
+
+    <!-- Bootstrap -->
+    <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- https://getbootstrap.com/docs/4.1/examples/dashboard/ -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/profilo.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark fixed-top bg-white flex-md-nowrap p-0 shadow">
+        <!-- <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Blockchain Developer Toolkit</a> -->
+        <img src="images/trenitalia.png" alt="trenitalia" style="width:140px;height:50px;">
+
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <small><a class="nav-link" href="#" style="color: black">Your Account: <span id="account" ></span></a></small>
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap pt-3 pb-2 mb-3" style="margin-top: 40px;">
+                    <div>
+                        <form class="profile-button">
+                            <input type="button" value="Profilo" onclick="history.go(-1)">
+                        </form>
+                    </div>
+                    <div id="content" class="col-lg-9" style="display: none;">
+                        <h2>Premium Contract</b>
+                        </h2>
+                        <p>Here is the value stored on the blockchain: <span id="value"></span></p>
+
+                        <div class="row">
+
+                            <div class="col-sm-6">
+                                <h5>Premi Da Usare:</h5>
+                                <div class="form-group">
+                                    <form onSubmit="App.myButtonCard100(); return false;" class="" role="form">
+                                        <button id="card100Selected" type="submit" class="btn btn-primary " value="100">100</button>
+                                    </form>
+                                </div>
+                                <div class="form-group">
+                                    <form onSubmit="App.myButtonCard200(); return false;" class="" role="form">
+                                        <button id="card200Selected" type="submit" class="btn btn-primary" value="200">200</button>
+                                    </form>
+                                </div>
+                                <div class="form-group">
+                                    <form onSubmit="App.myButtonCard300(); return false;" class="" role="form">
+                                        <button id="card300Selected" type="submit" class="btn btn-primary" value="300">300</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <h5>Prodotti Da Acquistare</h5>
+
+                                <div class="form-group">
+                                    <form onSubmit="App.myButtonProdotto1(); return false;" class="" role="form">
+                                        <button id="prodotto1Selected" type="submit" class="btn btn-primary" value="1000">1000</button>
+                                    </form>
+                                </div>
+                                <div class="form-group">
+                                    <form onSubmit="App.myButtonProdotto2(); return false;" class="" role="form">
+                                        <button id="prodotto2Selected" type="submit" class="btn btn-primary" value="1500">1500</button>
+                                    </form>
+                                </div>
+                                <div class="form-group">
+                                    <form onSubmit="App.myButtonProdotto3(); return false;" class="" role="form">
+                                        <button id="prodotto3Selected" type="submit" class="btn btn-primary" value="2000">2000</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--  <form onSubmit="App.set(); return false;" class="" role="form">
+                                <div class="form-group">
+                                    <input id="newValue" class="form-control" type="text"></input>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Reset</button>
+
+                            </form> -->
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://etherscan.io/jss/web3.min.js"></script>
+    <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
